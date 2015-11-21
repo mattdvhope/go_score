@@ -6,3 +6,5 @@
 //= require backbone/backbone
 //= require backbone-nested-attributes/all
 //= require bootstrap-sass-official
+
+//= require_tree .
