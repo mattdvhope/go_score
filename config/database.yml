@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: go_score_development
+  host: localhost
+
+test:
+  <<: *default
+  database: go_score_test
+
+production:
+  <<: *default
+  database: go_score_production
+  # username: go_score
+  password: <%= ENV['GO_SCORE_DATABASE_PASSWORD'] %>
